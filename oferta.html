@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oferta Educativa - Colegio San Miguel Arcángel</title>
+  <meta name="description" content="Niveles educativos: Inicial, Primario y Secundario del Colegio San Miguel Arcángel."/>
+  <link rel="canonical" href="https://csma.edu.ar/oferta.html"/>
+  <meta name="robots" content="index,follow"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Oferta Educativa - Colegio San Miguel Arcángel"/>
+  <meta property="og:description" content="Conocé nuestros niveles: Inicial, Primario y Secundario."/>
+  <meta property="og:image" content="https://csma.edu.ar/img/ej1.webp"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header>
+    <nav class="container" aria-label="Principal">
+      <a href="index.html" class="logo-link">
+        <img src="img/sma_logo_transparente.png" width="64" height="64" alt="Escudo del Colegio San Miguel Arcángel" class="logo-img"/>
+        <span class="logo-text">Colegio SMA</span>
+      </a>
+      <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="menu" id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="mision.html">Misión y Visión</a></li>
+        <li><a href="oferta.html" aria-current="page" class="active">Oferta educativa</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="content">
+      <h1>Oferta Educativa</h1>
+      <div class="cards-grid">
+        <article class="card" aria-labelledby="niv-inicial">
+          <h2 id="niv-inicial" class="h3like">Nivel Inicial</h2>
+          <p>Educación de base para los más pequeños.</p>
+        </article>
+        <article class="card" aria-labelledby="niv-primario">
+          <h2 id="niv-primario" class="h3like">Nivel Primario</h2>
+          <p>Formación académica y humana para niños.</p>
+        </article>
+        <article class="card" aria-labelledby="niv-secundario">
+          <h2 id="niv-secundario" class="h3like">Nivel Secundario</h2>
+          <p>Preparación integral para el futuro universitario y laboral.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; <span id="year"></span> Colegio San Miguel Arcángel - Lanús</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
