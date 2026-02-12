@@ -1,116 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Colegio San Miguel Arcángel - Lanús</title>
-  <meta name="description" content="Colegio San Miguel Arcángel (Lanús). Comunidad educativa católica franciscana. Nivel Secundario con orientación en Economía y Administración y en Ciencias Sociales."/>
-
-  <link rel="canonical" href="https://csma.edu.ar/"/>
-  <meta name="robots" content="index,follow"/>
-
-  <!-- Social preview -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Colegio San Miguel Arcángel - Lanús"/>
-  <meta property="og:description" content="Comunidad educativa católica y franciscana. Formación humana, espiritual y académica. Secundario: Economía y Administración · Ciencias Sociales."/>
-  <meta property="og:image" content="https://csma.edu.ar/img/ej1.webp"/>
-  <meta property="og:url" content="https://csma.edu.ar/"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-
-  <!-- Fuente -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
-
-  <!-- Preload imagen principal -->
-  <link rel="preload" as="image" href="img/ej1.webp" imagesrcset="img/ej1.webp 1280w" imagesizes="100vw"/>
-
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guriche | Perfumes que dejan huella</title>
+  <meta name="description" content="Landing page oficial de Guriche: catálogo de perfumes, servicios, historia del emprendimiento y formulario de contacto." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Saltar al contenido</a>
-
-  <header>
-    <nav class="container" aria-label="Principal">
-      <a href="index.html" class="logo-link">
-        <img
-          src="img/sma_logo_transparente.png"
-          width="64"
-          height="64"
-          alt="Escudo del Colegio San Miguel Arcángel"
-          class="logo-img"
-        />
-        <span class="logo-text">Colegio SMA</span>
-      </a>
-
-      <button
-        class="menu-toggle"
-        id="mobile-menu"
-        aria-label="Abrir menú"
-        aria-controls="nav-menu"
-        aria-expanded="false"
-      >
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-
-      <ul class="menu" id="nav-menu">
-        <li><a href="index.html" aria-current="page" class="active">Inicio</a></li>
-        <li><a href="mision.html">Misión y Visión</a></li>
-        <li><a href="oferta.html">Oferta educativa</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+  <header class="header" id="inicio">
+    <nav class="navbar container" aria-label="Principal">
+      <a href="#inicio" class="logo">Guriche</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
+
+    <section class="hero container">
+      <div>
+        <p class="hero-tag">Selección curada · diseñador y nicho</p>
+        <h1>Perfumes elegantes, frescos y con identidad propia</h1>
+        <p class="hero-subtitle">
+          En Guriche buscamos fragancias que se sientan limpias, modernas y memorables para cada estilo.
+        </p>
+        <a href="#catalogo" class="btn-primary">Ver catálogo</a>
+      </div>
+    </section>
   </header>
 
-  <main id="main">
-    <!-- HERO CON IMAGEN DE LA ESCUELA -->
-    <section class="hero hero-cover">
-      <!-- imagen decorativa de fondo -->
-      <img
-        class="hero-bg"
-        src="img/ej1.webp"
-        width="1280"
-        height="720"
-        alt=""
-        fetchpriority="high"
-      />
+  <main>
+    <section id="catalogo" class="section container">
+      <h2>Catálogo destacado</h2>
+      <p class="section-description">Disponibles en tester y presentación comercial. Si buscás una versión puntual, te la conseguimos.</p>
+      <div class="catalog-grid" id="catalogGrid"></div>
+    </section>
 
-      <div class="hero-inner">
-        <h1>Bienvenidos al Colegio San Miguel Arcángel</h1>
+    <section id="servicios" class="section section-soft">
+      <div class="container">
+        <h2>Servicios</h2>
+        <div class="services-grid">
+          <article class="card">
+            <h3>Asesoría personalizada</h3>
+            <p>Te recomendamos fragancias según tu estilo, ocasión y estación del año.</p>
+          </article>
+          <article class="card">
+            <h3>Stock por encargo</h3>
+            <p>¿Buscás una versión específica? La gestionamos para vos con seguimiento directo.</p>
+          </article>
+          <article class="card">
+            <h3>Entrega coordinada</h3>
+            <p>Retiro o envío acordado para que recibas tus perfumes de forma segura y rápida.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <p>
-          Comunidad educativa católica y franciscana en Lanús, formando personas libres,
-          solidarias y comprometidas. Nivel Secundario con orientación en
-          Economía y Administración y en Ciencias Sociales.
-        </p>
+    <section id="sobre-nosotros" class="section container">
+      <h2>Sobre nosotros</h2>
+      <p>
+        Guriche nació entre amigos con una idea clara: acercar perfumes de calidad con atención humana,
+        transparente y sin vueltas. Seleccionamos cada fragancia pensando en su rendimiento, versatilidad
+        y estilo para que compres con confianza.
+      </p>
+    </section>
 
-        <a href="oferta.html" class="hero-button">Conocer más</a>
+    <section id="contacto" class="section section-soft">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p class="section-description">Dejanos tu consulta y te respondemos a la brevedad.</p>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            <small class="error" id="errorNombre"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+            <small class="error" id="errorEmail"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos qué perfume buscás" required></textarea>
+            <small class="error" id="errorMensaje"></small>
+          </div>
+
+          <button type="submit" class="btn-primary">Enviar consulta</button>
+          <p class="form-success" id="formSuccess"></p>
+        </form>
       </div>
     </section>
   </main>
 
-  <!-- BOTÓN WHATSAPP -->
-  <a
-    class="whatsapp-fab"
-    href="https://wa.me/5491112345678?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20sobre%20el%20colegio"
-    target="_blank"
-    rel="noopener noreferrer nofollow"
-    aria-label="Escribir por WhatsApp"
-  >
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path
-        d="M19.11 17.2c-.29-.15-1.68-.83-1.94-.92-.26-.1-.45-.15-.65.15-.2.29-.75.92-.92 1.12-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.32-1.44-.86-.76-1.44-1.7-1.6-1.99-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.65-1.56-.89-2.14-.23-.56-.47-.49-.65-.5l-.55-.01c-.2 0-.51.07-.78.37s-1.02 1-1.02 2.44 1.05 2.83 1.2 3.03c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.61.7.22 1.33.19 1.83.12.56-.08 1.68-.69 1.92-1.36.24-.67.24-1.25.17-1.36-.07-.11-.26-.18-.55-.33z"
-      />
-    </svg>
-  </a>
-
-  <footer role="contentinfo">
-    <p>&copy; <span id="year"></span> Colegio San Miguel Arcángel - Lanús</p>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Guriche. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram de Guriche">Instagram</a>
+        <a href="#" aria-label="Facebook de Guriche">Facebook</a>
+        <a href="#" aria-label="WhatsApp de Guriche">WhatsApp</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
