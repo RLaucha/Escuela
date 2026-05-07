@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Contacto - Colegio San Miguel Arcángel</title>
+  <meta name="description" content="Contacto del Colegio San Miguel Arcángel: dirección, teléfono, correo, WhatsApp y formulario."/>
+
+  <link rel="canonical" href="https://csma.edu.ar/contacto.html"/>
+  <meta name="robots" content="index,follow"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Contacto - Colegio San Miguel Arcángel"/>
+  <meta property="og:description" content="Comunicate con el colegio. Estamos en Lanús."/>
+  <meta property="og:image" content="https://csma.edu.ar/img/ej1.webp"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css?v=3"/>
+<link rel="icon" type="image/png" href="img/sma_logo_transparente.png" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header>
+    <nav class="container" aria-label="Principal">
+      <a href="index.html" class="logo-link">
+        <img
+          src="img/sma_logo_transparente.png"
+          width="64"
+          height="64"
+          alt="Escudo del Colegio San Miguel Arcángel"
+          class="logo-img"
+        />
+        <span class="logo-text">Colegio SMA</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="mobile-menu"
+        aria-label="Abrir menú"
+        aria-controls="nav-menu"
+        aria-expanded="false"
+      >
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul class="menu" id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="mision.html">Misión y Visión</a></li>
+        <li><a href="oferta.html">Oferta educativa</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="contacto.html" aria-current="page" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="content">
+      <h1>Contacto</h1>
+
+      <div class="contact-layout-grid">
+        <div>
+          <ul class="contact-list" aria-label="Medios de contacto">
+        <li>📍 Cnel Molinedo 2406 - Lanus Oeste</li>
+        <li>📞 42089816</li>
+        <li>📧 <a class="btn-link" href="mailto:egbisma@hotmail.com">egbisma@hotmail.com</a></li>
+        <li style="display: flex; align-items: center; gap: 8px;">
+          <svg viewBox="0 0 32 32" aria-hidden="true" style="width: 24px; height: 24px; fill: #25D366; margin-left: -4px;">
+            <path d="M19.11 17.2c-.29-.15-1.68-.83-1.94-.92-.26-.1-.45-.15-.65.15-.2.29-.75.92-.92 1.12-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.32-1.44-.86-.76-1.44-1.7-1.6-1.99-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.65-1.56-.89-2.14-.23-.56-.47-.49-.65-.5l-.55-.01c-.2 0-.51.07-.78.37s-1.02 1-1.02 2.44 1.05 2.83 1.2 3.03c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.61.7.22 1.33.19 1.83.12.56-.08 1.68-.69 1.92-1.36.24-.67.24-1.25.17-1.36-.07-.11-.26-.18-.55-.33z"/>
+          </svg>
+          <a
+            class="btn-link"
+            href="https://wa.me/5491167670911?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20sobre%20inscripciones"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            style="margin-top: 0;"
+          >Escribir por WhatsApp</a>
+        </li>
+          </ul>
+          <form class="contact-form" novalidate style="margin-top: 32px;">
+        <label for="f-nombre">Nombre</label>
+        <input
+          id="f-nombre"
+          name="nombre"
+          type="text"
+          placeholder="Tu nombre"
+          autocomplete="name"
+          required
+          aria-describedby="help-nombre"
+        />
+        <small id="help-nombre" class="visually-hidden">Campo obligatorio</small>
+
+        <label for="f-email">Email</label>
+        <input
+          id="f-email"
+          name="email"
+          type="email"
+          placeholder="tu@email.com"
+          autocomplete="email"
+          required
+          aria-describedby="help-email"
+        />
+        <small id="help-email" class="visually-hidden">Campo obligatorio</small>
+
+        <label for="f-mensaje">Mensaje</label>
+        <textarea
+          id="f-mensaje"
+          name="mensaje"
+          placeholder="Tu consulta"
+          required
+          aria-describedby="help-mensaje"
+        ></textarea>
+        <small id="help-mensaje" class="visually-hidden">Campo obligatorio</small>
+
+        <button type="submit">Enviar</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <div>
+          <div class="map-card" aria-label="Mapa de ubicación" style="margin-top:0; height: 100%; display: flex; flex-direction: column;">
+        <iframe
+          title="Ubicación del colegio"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.351436073364!2d-58.399!3d-34.567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcccf0%3A0x0000000000000000!2sLan%C3%BAs%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1710000000000"
+          width="100%"
+          height="450"
+          style="border:0;max-width:100%;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="map-actions">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Cnel+Molinedo+2406+Lanus+Oeste" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Abrir en Google Maps</a>
+          <a href="https://waze.com/ul?ll=-34.685324,-58.423351&navigate=yes" target="_blank" rel="noopener noreferrer" class="btn-map">🚗 Abrir en Waze</a>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; <span id="year"></span> Colegio San Miguel Arcángel - Lanús</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
