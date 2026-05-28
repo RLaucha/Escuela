@@ -497,24 +497,32 @@ footer p {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #25D366;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+  background: var(--primary-color);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   display: grid;
   place-items: center;
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition: all 0.3s ease;
   z-index: 1100;
 }
 
 .whatsapp-fab:hover,
 .whatsapp-fab:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, .3);
+  background: var(--accent-color);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
 .whatsapp-fab svg {
   width: 28px;
   height: 28px;
   fill: #fff;
+  transition: fill 0.3s ease;
+}
+
+.whatsapp-fab:hover svg,
+.whatsapp-fab:focus-visible svg {
+  fill: var(--primary-color);
 }
 
 /* ---- MOBILE NAV ---- */
