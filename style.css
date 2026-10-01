@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+/* Tipografias de marca cargadas por assets/brand/brand.css (FrizQuadrata BT @font-face + Marcellus + Lato) */
 
 /* ---- RESET & VARIABLES ---- */
 * {
@@ -12,7 +12,7 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: var(--font-texto);
   color: var(--text-color);
   background: var(--bg-light);
   line-height: 1.7;
@@ -31,19 +31,30 @@ video {
 
 /* PALETA */
 :root {
-  --primary-color: #5b3a29;
-  /* Marrón institucional */
-  --secondary-color: #8D6E63;
-  /* Marrón arcilla suave para acentos */
-  --accent-color: #D4AF37;
-  /* Dorado institucional para botones y detalles */
-  --accent-hover: #b8972f;
-  --bg-light: #f7f2ec;
-  /* Fondo crema unificado */
-  --bg-soft: #f7f2ec;
-  /* Gris muy suave ajustado a cálido */
-  --text-color: #2b1d14;
-  --light-gray: #efe7df;
+  /* === Identidad franciscana - Provincia San Francisco Solano === */
+  --marron:        #622d1c;  /* primario - header/footer/bloques fuertes */
+  --verde:         #6a910a;  /* color de accion: botones, links activos, CTA */
+  --marron-claro:  #a3785b;
+  --marron-oscuro: #512b20;
+  --verde-oscuro:  #566d11;  /* hover de accion */
+  --verde-claro:   #8da346;
+  --crema:         #efedd4;  /* fondo claro */
+  --gris-oscuro:   #221f20;  /* texto de lectura */
+
+  /* Tipografias de marca */
+  --font-titulo:     'FrizQuadrata BT', 'Marcellus', Georgia, 'Times New Roman', serif;
+  --font-titulo-alt: 'Marcellus', Georgia, 'Times New Roman', serif;
+  --font-texto:      'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  /* Alias legacy remapeados a la nueva paleta (sin dorado) */
+  --primary-color:  var(--marron);
+  --secondary-color: var(--marron-claro);
+  --accent-color:   var(--verde);        /* antes dorado -> ahora verde (color de accion) */
+  --accent-hover:   var(--verde-oscuro);
+  --bg-light:       var(--crema);
+  --bg-soft:        var(--crema);
+  --text-color:     var(--gris-oscuro);
+  --light-gray:     #e3e0c4;
 }
 
 /* Accesibilidad utilidades */
@@ -95,7 +106,7 @@ main {
 
 /* TITULOS */
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-titulo);
   font-size: clamp(28px, 4vw + 1rem, 48px);
   margin: 0 0 .5rem;
   color: var(--primary-color);
@@ -104,7 +115,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-titulo);
   font-size: clamp(22px, 2.2vw + .8rem, 36px);
   margin: .5rem 0 1.25rem;
   color: var(--primary-color);
@@ -113,7 +124,7 @@ h2 {
 
 .h3like,
 h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-titulo);
   font-size: clamp(18px, 1.2vw + .7rem, 24px);
   margin: .25rem 0 .75rem;
   color: var(--primary-color);
@@ -131,8 +142,8 @@ h3 {
 
 /* ---- HEADER & NAV ---- */
 header {
-  background: rgba(74, 44, 42, 0.95);
-  /* rgba value of #4A2C2A */
+  background: rgba(98, 45, 28, 0.95);
+  /* marron franciscano #622d1c */
   color: #fff;
   position: sticky;
   top: 0;
@@ -190,7 +201,7 @@ nav.container {
 
 .menu a.active,
 [aria-current="page"] {
-  color: var(--accent-color);
+  color: var(--verde-claro);
 }
 
 .menu a::after {
@@ -198,7 +209,7 @@ nav.container {
   position: absolute;
   width: 0;
   height: 2px;
-  background: var(--accent-color);
+  background: var(--verde-claro);
   bottom: -6px;
   left: 0;
   transition: width .3s ease-in-out;
@@ -260,8 +271,8 @@ nav.container {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-      rgba(15, 15, 15, 0.4),
-      rgba(15, 15, 15, 0.8));
+      rgba(98, 45, 28, 0.72),
+      rgba(81, 43, 32, 0.88));
 }
 
 .hero-inner {
@@ -466,14 +477,13 @@ nav.container {
 
 .contact-form button:hover,
 .contact-form button:focus-visible {
-  background: #4b2f22;
-  /* Podría actualizar a un color derivado de primary-color, pero lo dejamos por ahora */
+  background: var(--marron-oscuro);
 }
 
 .form-msg {
   text-align: center;
   margin: 6px 0 0;
-  color: #4b2f22;
+  color: var(--marron-oscuro);
   min-height: 1.2em;
 }
 
@@ -535,7 +545,7 @@ footer p {
     position: absolute;
     top: 80px;
     right: 0;
-    background: rgba(74, 44, 42, 0.98);
+    background: rgba(98, 45, 28, 0.98);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     flex-direction: column;
@@ -845,8 +855,8 @@ footer p {
 }
 
 .btn-map:hover {
-  background: var(--accent-color);
-  color: var(--primary-color);
+  background: var(--verde-oscuro);
+  color: var(--crema);
 }
 
 /* ============================== */
@@ -879,7 +889,7 @@ footer p {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(43,29,20,0.55), rgba(43,29,20,0.75));
+  background: linear-gradient(to bottom, rgba(98,45,28,0.68), rgba(81,43,32,0.82));
   z-index: 1;
 }
 
@@ -892,7 +902,7 @@ footer p {
 }
 
 .oferta-hero__content h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-titulo);
   font-size: clamp(32px, 5vw + 1rem, 60px);
   font-weight: 700;
   letter-spacing: 3px;
@@ -915,7 +925,7 @@ footer p {
   color: #fff;
   padding: 18px 0;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-titulo);
   font-size: clamp(18px, 2.5vw, 26px);
   font-weight: 600;
   letter-spacing: 2px;
@@ -923,8 +933,8 @@ footer p {
 }
 
 .section-bar--accent {
-  background: var(--accent-color);
-  color: var(--primary-color);
+  background: var(--verde);
+  color: var(--crema);
 }
 
 /* Nivel Block - Split Layout */
@@ -974,7 +984,7 @@ footer p {
 }
 
 .nivel-split__text h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-titulo);
   font-size: clamp(20px, 2vw, 28px);
   color: var(--primary-color);
   margin: 0 0 12px;
@@ -1021,7 +1031,7 @@ footer p {
 }
 
 .feature-card h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-titulo);
   font-size: 1.05rem;
   color: var(--primary-color);
   margin: 0 0 10px;
@@ -1067,7 +1077,7 @@ footer p {
 }
 
 .eoe-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-titulo);
   font-size: clamp(20px, 2.5vw, 28px);
   color: var(--primary-color);
   margin: 0 0 20px;
@@ -1106,7 +1116,7 @@ footer p {
 .level-contact-title {
   color: var(--primary-color);
   margin: 0 0 16px;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-titulo);
   font-size: 1.25rem;
 }
 .level-contact-actions {
@@ -1138,8 +1148,8 @@ footer p {
   color: #fff;
 }
 .wa-btn:hover {
-  background: var(--accent-color);
-  color: var(--primary-color);
+  background: var(--verde-oscuro);
+  color: var(--crema);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -1160,8 +1170,8 @@ footer p {
   transition: all 0.3s ease;
 }
 .btn-enroll:hover {
-  background: var(--accent-color);
-  color: var(--primary-color);
+  background: var(--verde-oscuro);
+  color: var(--crema);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -1174,3 +1184,96 @@ footer p {
   transform: none;
 }
 
+
+
+/* ============================================================
+   REBRAND FRANCISCANO - complementos (footer franciscano, acentos)
+   ============================================================ */
+
+/* Logo complementario franciscano (paraguas "familia franciscana") en el pie.
+   Va sobre una placa crema para respetar area de proteccion y asegurar contraste
+   del verde sobre el marron del footer. */
+.footer-brand {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 18px;
+}
+.footer-franciscano {
+  display: block;
+  width: min(320px, 82vw);
+  height: auto;
+  background: var(--crema);
+  padding: 14px 22px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+}
+
+/* Acento de marca: filete verde superior en header y footer */
+footer,
+.site-footer {
+  border-top: 4px solid var(--verde);
+}
+header {
+  border-bottom: 3px solid var(--verde);
+}
+
+
+/* ============================================================
+   REBRAND FRANCISCANO - texturas de marca y separador de cordon
+   Velos claros/oscuros sobre cada textura para mantener contraste AA.
+   ============================================================ */
+
+/* Institucional -> madera, sutil, en las barras de seccion marrones */
+.section-bar {
+  background:
+    linear-gradient(rgba(98, 45, 28, 0.84), rgba(81, 43, 32, 0.88)),
+    url('assets/brand/texturas/textura-madera.jpg') center/cover;
+}
+
+/* Vida / comunidad -> hojas, muy suave, en las secciones crema */
+.bg-cream {
+  background:
+    linear-gradient(rgba(239, 237, 212, 0.90), rgba(239, 237, 212, 0.90)),
+    url('assets/brand/texturas/textura-hojas.jpg') center/cover;
+}
+
+/* Cierre -> sogas en el pie de pagina */
+footer,
+.site-footer {
+  background:
+    linear-gradient(rgba(98, 45, 28, 0.88), rgba(81, 43, 32, 0.92)),
+    url('assets/brand/texturas/textura-sogas.jpg') center/cover;
+}
+
+/* Separador de cordon franciscano (3 nudos) entre contenido y cierre */
+.separador-cordon {
+  flex: 0 0 auto;            /* el body es flex-column: evitar que lo encoja a 0 */
+  width: min(460px, 72%);
+  height: 34px;
+  min-height: 34px;
+  margin: 3rem auto;
+  background: url('assets/brand/patrones/cordon-franciscano.svg') center/contain no-repeat;
+}
+
+
+/* ============================================================
+   Iconos Lucide (outline) - heredan el color del texto (currentColor)
+   ============================================================ */
+.icon {
+  width: 1em;
+  height: 1em;
+  flex: none;              /* no se deforma dentro de botones flex */
+  stroke: currentColor;    /* mismo color que el texto */
+  fill: none;
+  vertical-align: -0.15em;
+}
+/* Titulos de nivel: icono + texto en linea */
+.level-contact-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Items de la lista de contacto (no son flex): separacion del icono */
+.contact-list li .icon {
+  margin-right: 7px;
+}

@@ -17,8 +17,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <!-- Tipografias de marca (FrizQuadrata BT + Marcellus + Lato) cargadas por assets/brand/brand.css -->
 
+  <link rel="stylesheet" href="assets/brand/brand.css"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="icon" type="image/png" href="img/sma_logo_transparente.png" />
 </head>
@@ -30,7 +31,7 @@
     <nav class="container" aria-label="Principal">
       <a href="index.html" class="logo-link">
         <img
-          src="img/sma_logo_transparente.png"
+          src="assets/brand/logos/isologo-solano-verde.png"
           width="64"
           height="64"
           alt="Escudo del Colegio San Miguel Arcángel"
@@ -83,16 +84,21 @@
           <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 8px;">Ciclo lectivo 2027</p>
           <p>Ya están abiertas las inscripciones. Consultanos por vacantes en Nivel Inicial, Primario y Secundario.</p>
           <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
-            <a href="https://forms.gle/X3XoQCTUFyd1gxqk7" target="_blank" rel="noopener noreferrer" class="btn-enroll">📝 Formulario Inicial</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSenU89NXD5ibJ6C61xa5aS7oUdCXgPhY-L5uIAzo8bP5Q2BJQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn-enroll">📝 Formulario Primario</a>
-            <a href="https://forms.gle/NDYGvcpc97145a6a6" target="_blank" rel="noopener noreferrer" class="btn-enroll">📝 Formulario Secundario</a>
+            <a href="https://forms.gle/X3XoQCTUFyd1gxqk7" target="_blank" rel="noopener noreferrer" class="btn-enroll"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Formulario Inicial</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSenU89NXD5ibJ6C61xa5aS7oUdCXgPhY-L5uIAzo8bP5Q2BJQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn-enroll"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Formulario Primario</a>
+            <a href="https://forms.gle/NDYGvcpc97145a6a6" target="_blank" rel="noopener noreferrer" class="btn-enroll"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Formulario Secundario</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <div class="separador-cordon" role="separator" aria-hidden="true"></div>
+
   <footer role="contentinfo">
+    <div class="footer-brand">
+      <img src="assets/brand/logos/logo-franciscano-verde.png" alt="Franciscanos - Provincia San Francisco Solano, Argentina" class="footer-franciscano" width="320" loading="lazy"/>
+    </div>
     <p>&copy; <span id="year"></span> Colegio San Miguel Arcángel - Lanús</p>
   </footer>
 

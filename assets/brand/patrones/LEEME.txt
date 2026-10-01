@@ -1,0 +1,13 @@
+PATRONES / ACENTOS
+==================
+
+Incluidos (vectoriales, genéricos en la paleta de marca):
+- tau.svg                 -> Cruz de Tau (favicon, viñetas, acento chico)
+- cordon-franciscano.svg  -> cordón de 3 nudos (separador horizontal entre secciones)
+
+Para FONDOS de sección usá las TEXTURAS reales (carpeta ../texturas/):
+madera, sogas y hojas.
+
+OPCIONAL (agregar si querés el calce exacto del manual):
+- patron Tau oficial, patrón de sogas, y la Cruz de San Damián ilustrada
+  (están en el Drive: Elementos visuales > Patrones). Dejalos acá si los exportás.

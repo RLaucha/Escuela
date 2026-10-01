@@ -1,0 +1,23 @@
+PONER ACÁ LOS ICONOS ILUSTRADOS (bajar del Drive)
+=================================================
+
+Son los iconos de estilo artesanal/"hecho a mano" de la marca.
+Es artwork original de la agencia: hay que bajarlos del Drive (no se pueden generar).
+
+De dónde sacarlos en el Drive:
+  Elementos visuales > Iconos               (versión rellena)
+  Elementos visuales > Iconos > Iconos en contorno   (versión contorno / negativo)
+  (dentro puede haber subcarpetas SVG y PNG — preferir SVG)
+
+Iconos del set (nombres sugeridos de archivo):
+  juventud, comunidad, biblia, donacion, rezo, formacion,
+  centro-cultural, colegio, centro-social, iglesia, voluntariado,
+  cercania, transformacion, evangelizacion, san-damian, cruz-san-damian,
+  mision, vision, valores, fraternidad, creacion, camino, cruz-tau
+
+Para la web alcanza con un subconjunto (los que encabezan secciones):
+  colegio, formacion, comunidad, juventud, iglesia (o cruz-tau), camino
+
+NOTA sobre la Cruz de San Damián:
+  La versión ilustrada oficial está en Elementos visuales > Patrones > Cruz de San Damian
+  (bajarla de ahí; es artwork específico, no una cruz genérica).

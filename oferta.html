@@ -12,8 +12,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <!-- Tipografias de marca (FrizQuadrata BT + Marcellus + Lato) cargadas por assets/brand/brand.css -->
 
+  <link rel="stylesheet" href="assets/brand/brand.css"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="icon" type="image/png" href="img/sma_logo_transparente.png" />
 </head>
@@ -24,7 +25,7 @@
   <header>
     <nav class="container" aria-label="Principal">
       <a href="index.html" class="logo-link">
-        <img src="img/sma_logo_transparente.png" width="64" height="64" alt="Escudo del Colegio San Miguel Arcángel" class="logo-img"/>
+        <img src="assets/brand/logos/isologo-solano-verde.png" width="64" height="64" alt="Escudo del Colegio San Miguel Arcángel" class="logo-img"/>
         <span class="logo-text">Colegio SMA</span>
       </a>
 
@@ -305,7 +306,12 @@
     </section>
   </main>
 
+  <div class="separador-cordon" role="separator" aria-hidden="true"></div>
+
   <footer role="contentinfo">
+    <div class="footer-brand">
+      <img src="assets/brand/logos/logo-franciscano-verde.png" alt="Franciscanos - Provincia San Francisco Solano, Argentina" class="footer-franciscano" width="320" loading="lazy"/>
+    </div>
     <p>&copy; <span id="year"></span> Colegio San Miguel Arcángel - Lanús</p>
   </footer>
 

@@ -1,0 +1,151 @@
+/* ============================================================
+   CSMA / ISMA — Identidad franciscana (Provincia San Francisco Solano)
+   Design tokens + base. Importar este archivo y usar las variables.
+   Assets reales incluidos en esta carpeta (fonts/, logos/, texturas/).
+   ============================================================ */
+
+/* --- Tipografía primaria real: FrizQuadrata BT Bold (archivo local) --- */
+@font-face {
+  font-family: 'FrizQuadrata BT';
+  src: url('fonts/FrizQuadrataBT-Bold.woff2') format('woff2'),
+       url('fonts/FrizQuadrataBT-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Tipografías digitales (Google Fonts): Marcellus (alt. de títulos) + Lato (cuerpo) --- */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  /* --- Colores primarios --- */
+  --marron:         #622d1c;
+  --verde:          #6a910a;
+
+  /* --- Secundarios --- */
+  --marron-claro:   #a3785b;
+  --marron-oscuro:  #512b20;
+  --verde-oscuro:   #566d11;
+  --verde-claro:    #8da346;
+
+  /* --- Neutros --- */
+  --crema:          #efedd4;
+  --gris-oscuro:    #221f20;
+
+  /* --- Roles semánticos --- */
+  --color-fondo:    var(--crema);
+  --color-texto:    var(--gris-oscuro);
+  --color-marca:    var(--marron);        /* header, footer, bloques fuertes */
+  --color-accion:   var(--verde);         /* botones, links activos, CTA */
+  --color-accion-hover: var(--verde-oscuro);
+
+  /* --- Tipografías --- */
+  --font-titulo:     'FrizQuadrata BT', 'Marcellus', Georgia, 'Times New Roman', serif;
+  --font-titulo-alt: 'Marcellus', Georgia, 'Times New Roman', serif; /* para subtítulos / digital */
+  --font-texto:      'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* ------------------ Base ------------------ */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--font-texto);
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  color: var(--marron);
+}
+h4, h5, h6 {
+  font-family: var(--font-titulo-alt);
+  color: var(--marron);
+}
+
+a { color: var(--color-accion); }
+a:hover { color: var(--color-accion-hover); }
+
+/* ------------------ Botones / CTA ------------------ */
+.btn,
+button.btn,
+.cta {
+  background-color: var(--color-accion);
+  color: var(--crema);
+  font-family: var(--font-texto);
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color .2s ease;
+}
+.btn:hover,
+button.btn:hover,
+.cta:hover { background-color: var(--color-accion-hover); }
+
+/* ------------------ Header / Footer ------------------ */
+.site-header,
+.site-footer {
+  background-color: var(--color-marca);
+  color: var(--crema);
+}
+.site-header a { color: var(--crema); }
+.site-header a.active,
+.site-header a:hover { color: var(--verde-claro); }
+
+/* ------------------ Ritmo de secciones ------------------ */
+.section--crema  { background-color: var(--crema);  color: var(--gris-oscuro); }
+.section--marron { background-color: var(--marron); color: var(--crema); }
+.section--verde  { background-color: var(--verde);  color: var(--crema); }
+
+/* ------------------ Hero con overlay de marca ------------------
+   Reemplaza el overlay gris/negro por un degradé marrón de marca.
+   Uso: <section class="hero" style="--hero-img:url('...')"> */
+.hero {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(98,45,28,0.78), rgba(81,43,32,0.88)),
+    var(--hero-img);
+  background-size: cover;
+  background-position: center;
+  color: var(--crema);
+}
+.hero h1 { color: var(--crema); }
+
+/* ------------------ Texturas de marca (fondos) ------------------
+   Imágenes reales del manual. Van suaves, de apoyo, sin tapar el texto.
+   Para que respire el contenido, poné el texto sobre una capa (card) con
+   fondo crema o usá las variantes con velo de abajo. */
+.bg-textura-madera { background: url('texturas/textura-madera.jpg') center/cover; }
+.bg-textura-sogas  { background: url('texturas/textura-sogas.jpg')  center/cover; }
+.bg-textura-hojas  { background: url('texturas/textura-hojas.jpg')  center/cover; }
+
+/* Variantes con velo claro encima para que el texto se lea (texto en gris oscuro) */
+.bg-textura-madera--velo {
+  background:
+    linear-gradient(rgba(239,237,212,0.86), rgba(239,237,212,0.86)),
+    url('texturas/textura-madera.jpg') center/cover;
+}
+.bg-textura-hojas--velo {
+  background:
+    linear-gradient(rgba(239,237,212,0.86), rgba(239,237,212,0.86)),
+    url('texturas/textura-hojas.jpg') center/cover;
+}
+.bg-textura-sogas--velo {
+  background:
+    linear-gradient(rgba(239,237,212,0.88), rgba(239,237,212,0.88)),
+    url('texturas/textura-sogas.jpg') center/cover;
+}
+
+/* ------------------ Accentos franciscanos (SVG) ------------------
+   Tau y cordón de 3 nudos (vectoriales, en marrón). Para favicon, viñetas
+   y separadores. Son genéricos en la paleta; si tenés el export oficial
+   del patrón Tau o la Cruz de San Damián, reemplazalos. */
+.separador-cordon {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: url('patrones/cordon-franciscano.svg') center/contain no-repeat;
+  margin: 2rem 0;
+}

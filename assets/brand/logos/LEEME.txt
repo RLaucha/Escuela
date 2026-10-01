@@ -1,0 +1,14 @@
+LOGOS (incluidos)
+=================
+
+- logo-franciscano-verde.png    -> logo complementario "FRANCISCANOS ar" + sello, VERDE
+- logo-franciscano-marron.png   -> logo complementario "FRANCISCANOS ar" + sello, MARRÓN
+- isologo-solano-verde.png      -> isologo Provincia San Francisco Solano (sello completo), VERDE
+
+Uso: el complementario (FRANCISCANOS) va junto al logo del colegio en header y footer,
+como paraguas franciscano. Elegir verde o marrón según el fondo (verde sobre crema/marrón,
+marrón sobre crema/claro). Respetar área de protección, no deformar, no recolorear.
+
+FALTA (agregar si lo tenés):
+- logo-colegio.(svg|png)  -> el escudo propio del Colegio San Miguel Arcángel
+  (hoy está en el sitio actual; conviene exportarlo en PNG transparente o SVG y ponerlo acá)
